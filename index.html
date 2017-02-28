@@ -7,10 +7,10 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="dist/button-states.min.css">
   <style>
-  .container {
-    width: 600px;
-    margin: 0 auto;
-  }
+    .container {
+      width: 600px;
+      margin: 0 auto;
+    }
   </style>
 </head>
 <body>
@@ -51,7 +51,13 @@
     require([
       'dist/button-states.min.js'
     ], function() {
-      console.log('ready')
+
+      var buttons = document.querySelectorAll('button.button-state');
+      for (var i = 0; i < buttons.length; i++) {
+        var button = buttons[i];
+        button.state('success', null, 3000, true, true);
+      }
+
     });
   </script>
 </body>

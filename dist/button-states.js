@@ -51,7 +51,6 @@ var ButtonStates = (function () {
         for (var i = 0; i < this.buttons.length; i++) {
             var button = this.buttons[i];
             new StateButton(button);
-            button.state('success', 'New Message', 3000, true, true);
         }
     };
     return ButtonStates;
