@@ -1,6 +1,6 @@
 interface StateButtonElement extends HTMLButtonElement {
-  state: any;
-  reset: any;
+  state();
+  reset();
 } 
 
 class StateButton {
