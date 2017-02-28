@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="node_modules/requirejs/require.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="dist/button-states.min.css">
+  <style>
+  .container {
+    width: 600px;
+    margin: 0 auto;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button
+      class="button-state"
+      data-loading="Loading..."
+      data-success="Success"
+      data-error="Error"
+      data-info="Info Message"
+      data-warning="Warning Message">click</button>
+
+    <button
+      class="button-state button-sm"
+      data-loading="Loading..."
+      data-success="Success"
+      data-error="Error"
+      data-info="Info Message"
+      data-warning="Warning Message">click</button>
+
+    <button
+      class="button-state button-lg"
+      data-loading="Loading..."
+      data-success="Success"
+      data-error="Error"
+      data-info="Info Message"
+      data-warning="Warning Message">click</button>
+
+    <button
+      class="button-state button-lg button-block"
+      data-loading="Loading..."
+      data-success="Success"
+      data-error="Error"
+      data-info="Info Message"
+      data-warning="Warning Message">click</button>
+  </div>
+  <script>
+    require([
+      'dist/button-states.min.js'
+    ], function() {
+      console.log('ready')
+    });
+  </script>
+</body>
+</html>

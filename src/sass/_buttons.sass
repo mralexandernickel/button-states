@@ -1,0 +1,124 @@
+button.button-state
+  border: 0
+  border-radius: 0
+  display: inline-block
+  height: $button-default--height
+  line-height: $button-default--height
+  font-size: $button-default--font-size
+  font-family: $button--font-family
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  letter-spacing: $button--letter-spacing
+  font-weight: $button--font-weight
+  text-transform: uppercase
+  padding: 0 $button-default--padding
+  padding-right: $button-default--height + $button-default--padding
+  margin: 0
+  position: relative
+  color: $color--default
+  //transition: background-color .1s ease-in-out
+  background-color: lighten($background-color--default, $lightness--percent)
+  cursor: pointer
+
+  &[disabled]
+    //opacity: .7
+    cursor: not-allowed
+
+  &:hover
+    background-color: lighten($background-color--default, ($lightness--percent / 2))
+    color: $color--default
+
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    height: $button-default--height
+    width: $button-default--height
+    background-color: $background-color--default
+    background-position: center center
+    background-repeat: no-repeat
+    +svgIcon($icon--default)
+
+  // BLOCK BUTTON
+  &.button-block
+    display: block
+    text-align: center
+    width: 100%
+
+  //
+  // SIZES
+  // ===========================================================================
+  //
+  &.button-sm
+    height: $button-sm--height
+    line-height: $button-sm--height
+    font-size: $button-sm--font-size
+    padding-left: $button-sm--padding
+    padding-right: $button-sm--height + $button-sm--padding
+
+    &::after
+      height: $button-sm--height
+      width: $button-sm--height
+      background-size: 50%
+
+  &.button-lg
+    height: $button-lg--height
+    line-height: $button-lg--height
+    font-size: $button-lg--font-size
+    padding-left: $button-lg--padding
+    padding-right: $button-lg--height + $button-lg--padding
+
+    &::after
+      height: $button-lg--height
+      width: $button-lg--height
+      background-size: 75%
+
+  //
+  // STYLES
+  // ===========================================================================
+  // WOULD BE COOL IN A LOOP; BUT CANT FIND A PROPER WAY
+  //
+  &-success
+    color: $color--success
+    background-color: lighten($background-color--success, $lightness--percent)
+
+    &:hover
+      background-color: lighten($background-color--success, ($lightness--percent / 2))
+
+    &::after
+      background-color: $background-color--success
+      +svgIcon($icon--success)
+
+  &-error
+    color: $color--error
+    background-color: lighten($background-color--error, $lightness--percent)
+
+    &:hover
+      background-color: lighten($background-color--error, ($lightness--percent / 2))
+
+    &::after
+      background-color: $background-color--error
+      +svgIcon($icon--error)
+
+  &-info
+    color: $color--info
+    background-color: lighten($background-color--info, $lightness--percent)
+
+    &:hover
+      background-color: lighten($background-color--info, ($lightness--percent / 2))
+
+    &::after
+      background-color: $background-color--info
+      +svgIcon($icon--info)
+
+  &-warning
+    color: $color--warning
+    background-color: lighten($background-color--warning, $lightness--percent)
+
+    &:hover
+      background-color: lighten($background-color--warning, ($lightness--percent / 2))
+
+    &::after
+      background-color: $background-color--warning
+      +svgIcon($icon--warning)

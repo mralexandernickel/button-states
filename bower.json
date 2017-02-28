@@ -1,0 +1,25 @@
+{
+  "name": "button-states",
+  "description": "Stateful buttons",
+  "main": "dist/button-states.js",
+  "authors": [
+    "Alexander Nickel <mr.alexander.nickel@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "stateful",
+    "buttons"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src",
+    "Gruntfile.coffee",
+    "tsconfig.json",
+    "index.html",
+    "test",
+    "tests"
+  ]
+}

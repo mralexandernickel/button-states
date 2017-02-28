@@ -1,0 +1,27 @@
+=phone
+  @media (max-width: #{$tablet-width - 1px})
+    @content
+
+=above-phone
+  @media (min-width: #{$tablet-width})
+    @content
+
+=under-tablet
+  @media (max-width: #{$tablet-width - 1px})
+    @content
+
+=tablet
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px})
+    @content
+
+=above-tablet
+  @media (min-width: #{$desktop-width})
+    @content
+
+=under-desktop
+  @media (max-width: #{$desktop-width - 1px})
+    @content
+
+=desktop
+  @media (min-width: #{$desktop-width})
+    @content
